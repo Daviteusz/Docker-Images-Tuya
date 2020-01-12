@@ -4,8 +4,9 @@ Clone and Build
 - cd Docker-Images-Tuya
 - docker build . -t tuya:latest
 
-How to use?
+Configure
 
+- cd Docker-Images-Tuya
 - Copy .env-template to .env and fill in parameters into .env
 - .env itself won't be checked in, since it may contain sensitive data
 - config to fill in:
