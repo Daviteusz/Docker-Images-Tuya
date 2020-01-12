@@ -1,6 +1,6 @@
 Clone and Build
 
-- git clone -b development https://github.com/Daviteusz/Docker-Images-Tuya.git
+- git clone -b development https://github.com/Daviteusz/tuya-docker.git
 - cd tuya-docker
 - docker build -t tuya:latest .
 
