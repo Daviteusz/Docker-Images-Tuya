@@ -1,13 +1,11 @@
 Clone and Build
 
 - git clone -b development https://github.com/Daviteusz/Docker-Images-Tuya.git
-- cd Docker-Images-Tuya
+- cd tuya-docker
 - docker build -t tuya:latest .
 
-Configure .env file 
+Configure docker-compose.yml file 
 
-- fill parameters into .env
-- .env itself won't be checked in, since it may contain sensitive data
 - config to fill in:
   - WLAN=[your wlan-interface]
   - AP=[the access-point you want to create]
@@ -15,18 +13,16 @@ Configure .env file
 - example-data which could be used
   - WLAN=wlan0
   - AP=vtrust-flash
-  - GATEWAY=10.42.42.1
-- adjust docker-compose.yml , if necessary:
   - adjust the volume folder, where you want your backups stored
 
 Run the image:
 
-- cd Docker-Images-Tuya
+- cd tuya-docker
 - docker-compose up -d
 - docker-compose exec tuya start
   - tuya-convert now starts within docker
 
 Stop the image:
 
-- push ctrl + c 
+- ctrl + c 
 - docker-compose down

@@ -6,7 +6,7 @@ RUN echo '* libraries/restart-without-asking boolean true' | debconf-set-selecti
 
 COPY docker/bin /usr/bin/
 
-RUN cd /usr/bin/ && git clone -b development https://github.com/ct-Open-Source/tuya-convert.git
+RUN cd /usr/bin/ && git clone https://github.com/ct-Open-Source/tuya-convert.git
 
 RUN cd /usr/bin/tuya-convert && ./install_prereq.sh
 
