@@ -17,3 +17,21 @@ Configure
   - WLAN=wlan0
   - AP=vtrust-flash
   - GATEWAY=10.42.42.1
+  
+Setup docker-compose:
+
+- adjust docker-compose.yml, if necessary:
+  - environment-variables may be different, for example network-adapter may be different from wlan0
+  - adjust the volume folder, where you want your backups stored
+
+Run the image:
+
+- cd Docker-Images-Tuya
+- docker-compose up -d
+- docker-compose exec tuya start
+  - tuya-convert now starts within docker
+
+Stop the image:
+
+- push ctrl + c 
+- docker-compose down
